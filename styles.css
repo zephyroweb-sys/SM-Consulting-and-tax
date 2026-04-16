@@ -573,8 +573,8 @@ img {
 
 @media (max-width: 480px) {
   .logo-img {
-     transform: scale(1.5); 
-     height: 80px;
+     transform: scale(2.2); /* Massive upscale for phone view */
+     height: 100px;
   }
   .trust-stat { font-size: 2.2rem; }
 }
