@@ -11,6 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
+                
+                // Number Counting Animation
+                const counters = entry.target.querySelectorAll('.count-up');
+                counters.forEach(counter => {
+                    if (!counter.classList.contains('counted')) {
+                        counter.classList.add('counted');
+                        const target = +counter.getAttribute('data-target');
+                        const suffix = counter.getAttribute('data-suffix') || '';
+                        const duration = 2000;
+                        const frameRate = 16;
+                        const increment = target / (duration / frameRate);
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current) + suffix;
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target + suffix;
+                            }
+                        };
+                        updateCounter();
+                    }
+                });
+                
                 // Optional: stop observing once animated
                 // observer.unobserve(entry.target);
             }
@@ -39,6 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const speed = el.dataset.speed || 0.1;
             el.style.transform = `translateY(${scrolled * speed}px)`;
         });
+
+        // Premium Scroll Progress
+        const progressIndicator = document.querySelector('.scroll-progress-bar');
+        if (progressIndicator) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolledHeight = (winScroll / height) * 100;
+            progressIndicator.style.width = scrolledHeight + "%";
+        }
     });
 
     // Mobile Menu Toggle
@@ -58,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Auto-close menu when clicking a link
+         // Auto-close menu when clicking a link
         navLinks.querySelectorAll('a').forEach(link => {
              link.addEventListener('click', () => {
                   navLinks.classList.remove('active');
@@ -68,5 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
              });
         });
     }
+
+    // Hero Slideshow Logic
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            // Move to next slide, loop back to 0 if at end
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000); // Change image every 5 seconds
+    }
+    
+    // Header Scroll Animation
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
 });

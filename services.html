@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore our financial, taxation, and statutory registration services available PAN India.">
     <title>Services | SM Accounting & Tax Consultants</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="SM Accounting & Tax Logo" class="logo-img">
+                <img src="images/logo.png?v=6" alt="SM Accounting & Tax Logo" class="logo-img">
             </a>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -24,8 +24,15 @@
                 <a href="about.html">About Us</a>
                 <a href="services.html" class="active">Services</a>
                 <a href="index.html#contact">Contact</a>
+                <div class="mobile-contact-info">
+                    <a href="mailto:Somashekar@smtaxconsultants.co.in"><i class="fas fa-envelope"></i> Somashekar@smtaxconsultants.co.in</a>
+                    <a href="tel:+918123005631"><i class="fas fa-phone"></i> +91 8123005631</a>
+                </div>
             </nav>
-            <a href="index.html#contact" class="btn btn-primary header-cta">Contact Now</a>
+            <div class="header-contact">
+                <a href="mailto:Somashekar@smtaxconsultants.co.in"><i class="fas fa-envelope"></i> Somashekar@smtaxconsultants.co.in</a>
+                <a href="tel:+918123005631"><i class="fas fa-phone"></i> +91 8123005631</a>
+            </div>
         </div>
     </header>
 
@@ -39,46 +46,107 @@
     <!-- Services Detail Layout -->
     <section class="section container stagger-container">
         
-        <div class="service-detail-card obs-fade-up" id="accounting">
-            <h2 class="text-h2" style="font-size: 2rem;"><i class="fas fa-file-invoice-dollar card-icon" style="font-size: 2rem; margin-right:1rem;"></i>Accounting & Payroll</h2>
-            <p>Accurate, transparent, and compliant accounting lays the groundwork for all financial growth. Our dedicated teams ensure your baseline numbers are spotless.</p>
-            <ul>
-                <li><strong>Bookkeeping:</strong> Daily data entry, ledger maintenance, and bank reconciliations.</li>
-                <li><strong>Financial Reporting:</strong> Preparation of Profit & Loss, Balance Sheets, and Cash Flow assertions.</li>
-                <li><strong>Payroll Processing:</strong> Accurate salary calculation, payroll compliance, and distribution.</li>
-            </ul>
+        <!-- Category 1 -->
+        <div class="service-grid-card obs-fade-up">
+            <div class="content-col">
+                <h2 class="text-h2"><i class="fas fa-file-invoice-dollar card-icon" style="font-size:inherit;"></i> Accounting & Payroll Services</h2>
+                <ul>
+                    <li><strong>Accounting system setup:</strong> Modernize and configure robust accounting systems tailored to your business scale.</li>
+                    <li><strong>Bookkeeping and preparation of financial statements:</strong> Maintain meticulous daily ledgers and generate compliant financial reports.</li>
+                    <li><strong>Budgeting and cash flow forecasting:</strong> Plan your financial future by projecting reliable cash inflows and managing strict budgets.</li>
+                    <li><strong>Project-wise financial reporting:</strong> Track profitability and direct expenses securely on a per-project basis.</li>
+                    <li><strong>Financial analysis and reporting:</strong> Gain valuable insights into operations through structured financial health metrics.</li>
+                    <li><strong>Payroll processing and compliance:</strong> Handle end-to-end employee salary dispatch, assuring complete statutory deduction compliance.</li>
+                    <li><strong>Liaison with banks and financial institutions:</strong> Seamlessly coordinate with financial bodies for loans, credit, and institutional tracking.</li>
+                    <li><strong>Company Auditing:</strong> Perform rigorous internal and external audits to ensure absolute financial transparency.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images/cat_accounting.png" alt="Accounting desk operations">
+            </div>
         </div>
         
-        <div class="service-detail-card obs-fade-up" id="taxation">
-            <h2 class="text-h2" style="font-size: 2rem;"><i class="fas fa-percent card-icon" style="font-size: 2rem; margin-right:1rem;"></i>Taxation & Compliance</h2>
-            <p>We navigate complex Indian tax frameworks to minimize your liability while ensuring 100% adherence to deadlines and policies.</p>
-            <ul>
-                <li><strong>Income Tax Filing:</strong> Holistic review and submissions for individuals and corporations.</li>
-                <li><strong>GST Services:</strong> Registrations, monthly/quarterly filings, and annual audits.</li>
-                <li><strong>TDS/TCS:</strong> Deduction guidelines and quarterly compliance.</li>
-                <li><strong>STPI & FLA:</strong> Advanced filings for specifically positioned IT/ITES organizations.</li>
-            </ul>
-        </div>
-        
-        <div class="service-detail-card obs-fade-up" id="registrations">
-            <h2 class="text-h2" style="font-size: 2rem;"><i class="fas fa-stamp card-icon" style="font-size: 2rem; margin-right:1rem;"></i>Statutory Registrations</h2>
-            <p>Setting up your business involves maneuvering through varied government portals. We make it seamless.</p>
-            <ul>
-                <li><strong>Business Incorporation:</strong> Private Limited, LLP, Partnership Firm setups.</li>
-                <li><strong>PAN & TAN:</strong> Prompt applications and status tracking.</li>
-                <li><strong>Labor Law Compliance:</strong> PF (Provident Fund) & ESI setups.</li>
-                <li><strong>Additional Certifications:</strong> MSME (Udyam), Food License (FSSAI), Trade Licenses.</li>
-            </ul>
+        <!-- Category 2 -->
+        <div class="service-grid-card obs-fade-up">
+            <div class="content-col">
+                <h2 class="text-h2"><i class="fas fa-percent card-icon" style="font-size:inherit;"></i> Taxation, Compliance & Advisory</h2>
+                <ul>
+                    <li><strong>Filing of Income Tax Returns for Individuals, Partnerships, LLPs, and Private Limited Companies:</strong> Streamlined return filing for all major entity types.</li>
+                    <li><strong>GST Filing, and Refund Applications:</strong> Manage complex GST ecosystems, ensuring timely returns and maximizing rightful refunds.</li>
+                    <li><strong>TDS Filing and Compliance:</strong> Handle Tax Deducted at Source calculations and file quarterly returns properly.</li>
+                    <li><strong>Professional Tax Compliance:</strong> Maintain regional professional tax mandates for your firm and employees.</li>
+                    <li><strong>Tax review and reconciliation:</strong> Audit historically filed taxes against books to resolve discrepancies.</li>
+                    <li><strong>Tax payment support:</strong> Facilitate secure channels and accurate calculations for depositing government taxes.</li>
+                    <li><strong>Representation before tax authorities:</strong> Serve as your official, professional proxy during assessments or disputes.</li>
+                    <li><strong>Payroll tax structuring:</strong> Optimize wage and salary breakdowns to be tax-efficient for both employer and employee.</li>
+                    <li><strong>STPI Monthly, Quarterly, and Annual Filing:</strong> Ensure fully compliant reporting for STPI registered companies.</li>
+                    <li><strong>Foreign Liabilities and Assets (FLA) Filing:</strong> Rigorously document and report cross-border operations.</li>
+                    <li><strong>EPR Filling:</strong> Execute Extended Producer Responsibility filings for rigorous environmental reporting standards.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images/cat_tax.png" alt="Taxation and Compliance Documents">
+            </div>
         </div>
 
-        <div class="service-detail-card obs-fade-up" id="advisory">
-            <h2 class="text-h2" style="font-size: 2rem;"><i class="fas fa-chart-line card-icon" style="font-size: 2rem; margin-right:1rem;"></i>Advisory & Corporate Support</h2>
-            <p>Beyond standard filings, we operate as strategic partners guiding you through multifaceted acquisitions, restructuring, and systemic optimization.</p>
-            <ul>
-                <li><strong>Tax Planning:</strong> Proactive identification of tax-saving avenues within the legal framework.</li>
-                <li><strong>Legal Consultancy:</strong> Contract reviewing and basic legal advisory.</li>
-                <li><strong>International Compliance:</strong> Navigating foreign remittances and cross-border regulatory measures (FEMA).</li>
-            </ul>
+        <!-- Category 3 -->
+        <div class="service-grid-card obs-fade-up">
+            <div class="content-col">
+                <h2 class="text-h2"><i class="fas fa-stamp card-icon" style="font-size:inherit;"></i> Statutory Registrations & Compliance</h2>
+                <ul>
+                    <li><strong>Business entity registration (Proprietorship, Partnership, LLP, Private Limited Company, Trusts, etc.):</strong> Establish your venture legally under the ideal corporate structure.</li>
+                    <li><strong>PAN & TAN Registration:</strong> Quickly acquire critical national identification and tax deduction numbers.</li>
+                    <li><strong>GST Registration:</strong> Onboard your business into the Goods and Services Tax network securely.</li>
+                    <li><strong>Professional Tax Registration:</strong> Register your organizational entity for state-mandated professional taxes.</li>
+                    <li><strong>Food licence:</strong> Secure legal authority to manufacture or distribute food via local departments.</li>
+                    <li><strong>Provident Fund (PF) Registration:</strong> Initiate mandatory employee retirement and welfare funds.</li>
+                    <li><strong>Employees State Insurance (ESI) Registration:</strong> Provide comprehensive medical safeguarding for your workforce.</li>
+                    <li><strong>Digital Signature Certificates (DSC):</strong> Obtain encrypted digital tokens for legal e-filing authorization.</li>
+                    <li><strong>Import Export Code (IEC):</strong> Unlock international markets with a legally recognized global trading code.</li>
+                    <li><strong>FSSAI Registration:</strong> Certify your entire supply chain for national food safety adherence.</li>
+                    <li><strong>MSME Registration:</strong> Claim subsidies and government benefits by registering as a Micro, Small, or Medium Enterprise.</li>
+                    <li><strong>LMPC Registration:</strong> Ensure compliance with the Legal Metrology Packaged Commodities directives.</li>
+                    <li><strong>EPR Registration:</strong> Onboard your manufacturing pipelines with environmental and plastic waste management boards.</li>
+                    <li><strong>Labour License & other statutory registrations:</strong> Maintain standard employment protocols under the Ministry of Labour.</li>
+                    <li><strong>Company Law Compliance (ROC filings, registers, resolutions, etc.):</strong> Safely handle all mandatory corporate governance regulations.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images/cat_registrations.png" alt="Statutory Registration Stamps">
+            </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="service-grid-card obs-fade-up">
+            <div class="content-col">
+                <h2 class="text-h2"><i class="fas fa-chart-line card-icon" style="font-size:inherit;"></i> Advisory Services</h2>
+                <ul>
+                    <li><strong>Tax Planning and Strategy:</strong> Legally construct the most efficient methods to minimize systemic tax burdens over time.</li>
+                    <li><strong>Tax Audit and Representation:</strong> Handle intensive government tax audits and protect your business's legal stance.</li>
+                    <li><strong>Tax Litigation Support:</strong> Offer robust defense and document-backed evidence during prolonged tax disputes.</li>
+                    <li><strong>Tax Advisory for Individuals and Businesses:</strong> Custom-tailored advice for maximizing personal wealth and corporate margins.</li>
+                    <li><strong>Legal Consultancy:</strong> Assist in navigating complex bureaucratic directives, contracts, and dispute resolutions.</li>
+                    <li><strong>Business Advisory:</strong> Provide strategic, high-level business counseling to pivot your business towards growth.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images/cat_advisory.png" alt="Business Advisory Boardroom">
+            </div>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="service-grid-card obs-fade-up">
+            <div class="content-col">
+                <h2 class="text-h2"><i class="fas fa-building card-icon" style="font-size:inherit;"></i> Corporate Accounting Support</h2>
+                <ul>
+                    <li><strong>End-to-end accounting services for domestic and international clients:</strong> Provide fully managed global-standard accounting operations.</li>
+                    <li><strong>Compliance with Accounting Standards and regulatory requirements:</strong> Ensure ledgers conform flawlessly with statutory financial laws.</li>
+                    <li><strong>Business-specific financial reporting and analysis:</strong> Build contextualized financial decks based on industry-specific KPI tracking.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images/cat_corporate.png" alt="Corporate Accounting Dashboards">
+            </div>
         </div>
 
     </section>
@@ -87,7 +155,7 @@
     <footer class="footer" id="contact">
         <div class="container grid-4 stagger-container">
             <div class="footer-col obs-fade-up">
-                <img src="images/logo.png" alt="SM Accounting & Tax Logo" class="footer-logo">
+                <img src="images/logo.png?v=6" alt="SM Accounting & Tax Logo" class="footer-logo">
                 <p>To be a trusted and leading accounting, tax, and business advisory firm in India, driving sustainable growth for our clients through unwavering integrity.</p>
             </div>
             <div class="footer-col obs-fade-up">
@@ -105,9 +173,8 @@
             </div>
             <div class="footer-col obs-fade-up">
                 <h4>Business Hours</h4>
-                <p><strong>Mon-Fri:</strong> 10:00 AM – 6:30 PM</p>
-                <p><strong>Sat:</strong> 10:00 AM – 2:00 PM</p>
-                <p><strong>Sun:</strong> Closed</p>
+                <p><strong>Monday-Saturday:</strong> 10:00am to 6:30pm</p>
+                <p><strong>Sunday & Holidays:</strong> Closed</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -117,6 +184,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js?v=2"></script>
+    <script src="scripts.js?v=4"></script>
 </body>
 </html>
