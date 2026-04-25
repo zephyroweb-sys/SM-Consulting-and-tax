@@ -1019,6 +1019,11 @@ img {
     display: flex;
   }
 
+  /* Larger social icons in mobile menu */
+  .mobile-contact-info .header-social a {
+    font-size: 2rem;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
