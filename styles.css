@@ -1229,3 +1229,37 @@ img {
     transform: none;
   }
 }
+
+/* Call Now Mobile Blink */
+.mobile-call-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-blink-call {
+  display: block;
+  background-color: var(--color-gold);
+  color: var(--color-black) !important;
+  font-weight: 800;
+  padding: 1rem;
+  border-radius: var(--radius-pill);
+  animation: bgBlink 1s infinite alternate;
+  margin-top: 2rem;
+  text-align: center;
+  width: 90%;
+  font-size: 1.2rem !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+@keyframes bgBlink {
+  0% { background-color: var(--color-gold); box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); transform: scale(1); }
+  100% { background-color: #ffe67e; box-shadow: 0 0 25px rgba(212, 175, 55, 1); transform: scale(1.05); }
+}
+
+.footer-map-container {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  height: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
