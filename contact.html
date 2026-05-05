@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact SM Accounting & Tax Consultants. Let's discuss your financial compliance and business advisory needs.">
+    <meta name="description"
+        content="Contact SM Accounting & Tax Consultants. Let's discuss your financial compliance and business advisory needs.">
     <title>Contact Us | SM Accounting & Tax Consultants</title>
     <link rel="stylesheet" href="styles.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -28,20 +31,26 @@
                     <div class="mobile-call-btn-container">
                         <a href="tel:+918123005631" class="btn-blink-call"><i class="fas fa-phone-alt"></i> CALL NOW</a>
                     </div>
-                    <a href="mailto:Somashekar@smtaxconsultants.co.in" style="margin-top: 1rem;"><i class="fas fa-envelope"></i> Somashekar@smtaxconsultants.co.in</a>
+                    <a href="mailto:Somashekar@smtaxconsultants.co.in" style="margin-top: 1rem;"><i
+                            class="fas fa-envelope"></i> Somashekar@smtaxconsultants.co.in</a>
                     <a href="tel:+918123005631"><i class="fas fa-phone"></i> +91 8123005631</a>
                     <div class="header-social">
-                        <a href="https://www.instagram.com/smtaxconsultants" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/somashekar-m-c-799204240/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/smtaxconsultants" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/somashekar-m-c-799204240/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </nav>
             <div class="header-contact">
-                <a href="mailto:Somashekar@smtaxconsultants.co.in"><i class="fas fa-envelope"></i> Somashekar@smtaxconsultants.co.in</a>
+                <a href="mailto:Somashekar@smtaxconsultants.co.in"><i class="fas fa-envelope"></i>
+                    Somashekar@smtaxconsultants.co.in</a>
                 <a href="tel:+918123005631"><i class="fas fa-phone"></i> +91 8123005631</a>
                 <div class="header-social">
-                    <a href="https://www.instagram.com/smtaxconsultants" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/somashekar-m-c-799204240/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/smtaxconsultants" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/somashekar-m-c-799204240/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -55,31 +64,28 @@
         </div>
         <div class="container hero-content obs-fade-up">
             <h1 class="text-hero">GET IN TOUCH</h1>
-            <p class="hero-subtitle">We are here to answer any questions you may have about your corporate compliance and financial strategies.</p>
+            <p class="hero-subtitle">We are here to answer any questions you may have about your corporate compliance
+                and financial strategies.</p>
         </div>
     </section>
 
     <!-- Contact Main Section -->
     <section class="section container">
         <div class="grid-2 contact-grid stagger-container">
-            
+
             <!-- Contact Form -->
             <div class="contact-form-container obs-fade-up">
-                <h2 class="text-h2" style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-black);">Send us a Message</h2>
-                
+                <h2 class="text-h2" style="font-size: 2rem; margin-bottom: 2rem; color: var(--color-black);">Send us a
+                    Message</h2>
+
                 <!-- Web3Forms Form -->
-                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <!-- Web3Forms Form (AJAX) -->
+                <form id="contactForm">
                     <!-- IMPORTANT: Replace the value below with your actual Web3Forms Access Key -->
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    
-                    <!-- Optional: Redirect after successful submission -->
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <input type="hidden" name="access_key" value="9abe3027-2fc5-47af-8fb1-7cf09983f03b">
                     
                     <!-- Optional: Subject Line -->
                     <input type="hidden" name="subject" value="New Inquiry from SM Accounting Website">
-                    
-                    <!-- Honeypot Spam Protection -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -115,18 +121,62 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.2rem;">Submit Inquiry</button>
+                    <p id="formResult" style="margin-top: 1rem; font-weight: 600; text-align: center; color: var(--color-primary);"></p>
                 </form>
+
+                <script>
+                    const form = document.getElementById('contactForm');
+                    const result = document.getElementById('formResult');
+
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const formData = new FormData(form);
+                        const object = Object.fromEntries(formData);
+                        const json = JSON.stringify(object);
+                        
+                        result.style.color = "var(--color-primary)";
+                        result.innerHTML = "Sending...";
+
+                        fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: json
+                        })
+                        .then(async (response) => {
+                            let json = await response.json();
+                            if (response.status == 200) {
+                                result.style.color = "green";
+                                result.innerHTML = "Success! Your message has been sent.";
+                                form.reset();
+                            } else {
+                                console.log(response);
+                                result.style.color = "red";
+                                result.innerHTML = "Error: " + json.message;
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            result.style.color = "red";
+                            result.innerHTML = "Something went wrong!";
+                        });
+                    });
+                </script>
             </div>
 
             <!-- Contact Details -->
             <div class="contact-details-card obs-fade-up">
                 <h3>Our Office</h3>
-                
+
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div>
-                        <p style="color: var(--color-white); font-weight: bold; margin-bottom: 0.25rem;">Headquarters</p>
-                        <p>No. 48, Ground Floor, 2nd Cross,<br>1st Main, Dr. AIT College Road,<br>Kengunte, Mallathahalli,<br>Bengaluru – 560056</p>
+                        <p style="color: var(--color-white); font-weight: bold; margin-bottom: 0.25rem;">Headquarters
+                        </p>
+                        <p>No. 48, Ground Floor, 2nd Cross,<br>1st Main, Dr. AIT College Road,<br>Kengunte,
+                            Mallathahalli,<br>Bengaluru – 560056</p>
                     </div>
                 </div>
 
@@ -134,7 +184,8 @@
                     <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
                     <div>
                         <p style="color: var(--color-white); font-weight: bold; margin-bottom: 0.25rem;">Phone</p>
-                        <p><a href="tel:+918123005631">+91 81230 05631</a><br><small>(WhatsApp & Calls Available)</small></p>
+                        <p><a href="tel:+918123005631">+91 81230 05631</a><br><small>(WhatsApp & Calls
+                                Available)</small></p>
                     </div>
                 </div>
 
@@ -149,7 +200,8 @@
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fas fa-clock"></i></div>
                     <div>
-                        <p style="color: var(--color-white); font-weight: bold; margin-bottom: 0.25rem;">Business Hours</p>
+                        <p style="color: var(--color-white); font-weight: bold; margin-bottom: 0.25rem;">Business Hours
+                        </p>
                         <p>Monday - Saturday: 10:00 AM - 6:30 PM<br>Sunday & Holidays: Closed</p>
                     </div>
                 </div>
@@ -163,7 +215,8 @@
         <div class="container grid-4 stagger-container">
             <div class="footer-col obs-fade-up">
                 <img src="images/logo.png?v=6" alt="SM Accounting & Tax Logo" class="footer-logo">
-                <p>To be a trusted and leading accounting, tax, and business advisory firm in India, driving sustainable growth for our clients through unwavering integrity.</p>
+                <p>To be a trusted and leading accounting, tax, and business advisory firm in India, driving sustainable
+                    growth for our clients through unwavering integrity.</p>
             </div>
             <div class="footer-col obs-fade-up">
                 <h4>Quick Links</h4>
@@ -176,17 +229,24 @@
             </div>
             <div class="footer-col obs-fade-up">
                 <h4>Contact Information</h4>
-                <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> No. 48, Ground Floor, 2nd Cross, 1st Main, Dr. AIT College Road, Kengunte, Mallathahalli, Bengaluru – 560056</p>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> No. 48, Ground Floor, 2nd Cross,
+                    1st Main, Dr. AIT College Road, Kengunte, Mallathahalli, Bengaluru – 560056</p>
                 <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Somashekar@smtaxconsultants.co.in</p>
-                <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 8123005631 <br><small>(WhatsApp & Call Available)</small></p>
+                <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 8123005631 <br><small>(WhatsApp & Call
+                        Available)</small></p>
             </div>
             <div class="footer-col obs-fade-up">
                 <h4>Business Hours</h4>
                 <p><strong>Monday-Saturday:</strong> 10:00am to 6:30pm</p>
                 <p style="margin-bottom: 2rem;"><strong>Sunday & Holidays:</strong> Closed</p>
-                <div class="footer-map-container" style="height: 250px; border-radius: var(--radius-card); overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative;">
-                    <a href="https://maps.app.goo.gl/VyXDqvGg7Y3oF2Cc8" target="_blank" aria-label="Open in Google Maps" style="position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 10;"></a>
-                    <iframe src="https://maps.google.com/maps?q=SM%20Accounting%20and%20Tax%20Consultants,%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="footer-map-container"
+                    style="height: 250px; border-radius: var(--radius-card); overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative;">
+                    <a href="https://maps.app.goo.gl/VyXDqvGg7Y3oF2Cc8" target="_blank" aria-label="Open in Google Maps"
+                        style="position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 10;"></a>
+                    <iframe
+                        src="https://maps.google.com/maps?q=SM%20Accounting%20and%20Tax%20Consultants,%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -199,4 +259,5 @@
 
     <script src="scripts.js?v=9"></script>
 </body>
+
 </html>
